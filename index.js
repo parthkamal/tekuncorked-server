@@ -23,7 +23,7 @@ io.on('connection', async (socket) => {
 
   try {
     const devices = await getDevices();
-    socket.emit('data', { devices });
+    socket.emit('data', devices);
 
   } catch (error) {
     console.log('error fetching devices during connection');
